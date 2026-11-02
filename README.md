@@ -6,8 +6,10 @@
 <p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
 
 This fork matches the colors of the Rosé Pine Squirrel schemes. Squirrel
-defines them in Display P3, so the theme files convert them to sRGB for
-fcitx5.
+writes colors as `0xAABBGGRR` in Display P3. `scripts/generate.py` reverses
+the channels, converts the colors to sRGB, and writes the `theme.conf` files
+in the `#RRGGBBAA` format that fcitx5 expects. Edit the schemes in the script
+and run `python3 scripts/generate.py` to regenerate them.
 
 <p align="center">
     <a href="https://github.com/rose-pine/rose-pine-theme">
